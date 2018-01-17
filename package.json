@@ -1,0 +1,31 @@
+{
+  "name": "zip-files",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magicxiao/zip-files.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/magicxiao/zip-files/issues"
+  },
+  "homepage": "https://github.com/magicxiao/zip-files#readme",
+  "dependencies": {
+    "async": "^2.6.0",
+    "fs-extra": "^5.0.0",
+    "make-dir": "^1.1.0",
+    "zip-dir": "^1.0.2"
+  },
+  "devDependencies": {
+    "mocha": "^4.1.0"
+  }
+}
