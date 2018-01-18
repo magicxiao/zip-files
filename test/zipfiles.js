@@ -1,12 +1,14 @@
 const zipfiles = require('../lib/index')
 const path = require('path')
 const fs = require('fs-extra')
+const assert = require('assert')
 
 const dist = path.join(__dirname, 'dist')
+const target = path.join(__dirname, 'dist', 'dist.tar.gz')
 
 const files = [
-  path.join(__dirname, 'file1.log'),
-  path.join(__dirname, 'file2.log'),
+  path.join(__dirname, 'source', 'file1.log'),
+  path.join(__dirname, 'source', 'file2.log'),
 ]
 
 describe('zip', function() {
@@ -16,8 +18,13 @@ describe('zip', function() {
     })
 
     it('should zip files', function() {      
-      zipfiles.zipFiles(files, dist, (err) => {
-        
+      zipfiles.zip(files, dist, (err) => {
+        fs.ensureFile(target)
+        .then(() => {
+        })
+        .catch(err => {
+          assert.ifError(err)
+        })
       })
     });
   });
